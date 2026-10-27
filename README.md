@@ -4,26 +4,28 @@ Nama: Muhammad Ahwazi
 
 1. Untuk tugas satu, dibuat fungsi updateHarga yang menerima pointer ke Barang dan harga baru. Karena yang dikirim adalah alamat barangnya, harga di data aslinya ikut berubah lewat operator panah.
 
+```c
 void updateHarga(Barang *b, int hargaBaru, int jenis) {
 	b->harga = hargaBaru;
 	printf("Harga %s sekarang adalah Rp%d", dbBarang[jenis-1].nama, hargaBaru);
 }
-
+```
 ![Fungsi updateHarga](screenshots/updateHarga.png)
 
 2. Untuk tugas dua, dibuat fungsi updateNama. Nama adalah array of char sehingga tidak bisa diganti memakai tanda =, jadi namanya disalin dengan strcpy. Nama lama disimpan dulu di variabel sementara supaya bisa ditampilkan.
-
+```c
 void updateNama(Barang *b, char namaBaru[], int jenis) {
 	char sementara[50];
 	strcpy(sementara, b->nama);
 	strcpy(b->nama,namaBaru);
 	printf("Nama baru untuk %s sekarang adalah %s", sementara, namaBaru);
 }
+```
 ![Fungsi updateNama](screenshots/updateNama.png)
 
 
 3. Untuk tugas tiga, fungsi beliBarang diubah. Setelah total dihitung, dicek dulu apakah m bukan NULL, baru dicek m->poin >= 1000. Kalau iya, total dikali 90/100 dan poin member dikurangi 1000.
-
+```c
 int total = b->harga * qty;
 if(m != NULL) {
 	if(m->poin >= 1000) {
@@ -32,12 +34,12 @@ if(m != NULL) {
 	}
 }
 ![Fungsi diskon](screenshots/diskon.png)
-
+```
 
 4. Untuk tantangan tambahan, seluruh alur program dibungkus while(1) supaya berjalan terus sampai pengguna memilih menu 6 (keluar). Pilihan menu dibaca dengan scanf lalu dijalankan dengan switch-case. Kalau angka yang dimasukkan di luar 1 sampai 6, program menampilkan pesan salah lalu mengulang menu. Berikut kode lengkapnya:
 
 ![demo interaktif](screenshots/fullcode.png)
-
+```c
 #include <stdio.h>
 #include <string.h>
 
