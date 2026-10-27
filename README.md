@@ -33,8 +33,9 @@ if(m != NULL) {
 		m->poin -= 1000;
 	}
 }
-![Fungsi diskon](screenshots/diskon.png)
 ```
+![Fungsi diskon](screenshots/diskon.png)
+
 
 4. Untuk tantangan tambahan, seluruh alur program dibungkus while(1) supaya berjalan terus sampai pengguna memilih menu 6 (keluar). Pilihan menu dibaca dengan scanf lalu dijalankan dengan switch-case. Kalau angka yang dimasukkan di luar 1 sampai 6, program menampilkan pesan salah lalu mengulang menu. Berikut kode lengkapnya:
 
